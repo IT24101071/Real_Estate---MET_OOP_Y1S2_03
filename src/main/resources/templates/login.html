@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #dce7f9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .nav__bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0px;
+            padding: 10px;
+            font-size: medium;
+            font-weight: lighter;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav__bar__section1 {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav__bar__section1 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav__bar__section2 img {
+            width: 150px;
+        }
+
+        .nav__bar__section3 {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav__bar__section3 button {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 30px;
+            border: transparent;
+            font-size: medium;
+        }
+
+        #signinbtn,
+        #signupbtn {
+            width: 100px;
+            cursor: pointer;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-left: 550px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #7fc8f8;
+            border: none;
+            border-radius: 6px;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #5bb0ea;
+        }
+
+        .p {
+            text-align: center;
+            margin-top: 15px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!--navbar-->
+<div class="nav__bar">
+    <div class="nav__bar__section1">
+        <a href="/home">Home</a>
+        <a href="/login">Sales</a>
+        <a href="/login">Contact Us</a>
+    </div>
+    <div class="nav__bar__section2">
+        <img src="./Images/smaller-feather-300x134.png" alt="Logo">
+    </div>
+    <div class="nav__bar__section3">
+        <button id="signinbtn">Sign In</button>
+        <button id="signupbtn">Sign Up</button>
+    </div>
+</div>
+
+<div class="form-container">
+    <h2>Real Estate Login</h2>
+    <form method="post" action="/login">
+        Username: <input type="text" name="username" required><br>
+        Password: <input type="password" name="password" required><br>
+        <button type="submit">Login</button>
+    </form>
+    <p>Dont have an account? <a href="/signup">SignUp</a> </p>
+    <p th:text="${message}" class="p"></p>
+</div>
+
+<script>
+    var signinbtn = document.getElementById("signinbtn");
+    var signupbtn = document.getElementById("signupbtn");
+
+    signinbtn.addEventListener("click",function(){
+        window.location.href = "/login"
+    })
+
+    signupbtn.addEventListener("click",function(){
+        window.location.href = "/signup"
+    })
+
+
+</script>
+</body>
+</html>

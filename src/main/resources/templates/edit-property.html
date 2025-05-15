@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Property</title>
+    <style>
+         * {
+             font-family: "Glacial Indifference", sans-serif;
+             font-optical-sizing: auto;
+             font-style: normal;
+             font-variation-settings: "wdth" 100;
+             margin: 0px;
+         }
+        .popup-card {
+            display: none;
+            position: absolute;
+            right: 10px;
+            top: 60px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            padding: 15px;
+            z-index: 999;
+            animation: fadeIn 0.3s ease-in-out;
+            min-width: 200px;
+        }
+
+        .popup-card a {
+            display: block;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            border-bottom: 1px solid #eee;
+        }
+
+        .popup-card a:last-child {
+            border-bottom: none;
+        }
+
+        .popup-card a:hover {
+            background-color: #f2f2f2;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .nav__bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0px;
+            padding: 10px;
+            font-size: medium;
+            font-weight: lighter;
+            position: sticky;
+            margin-bottom: 20px;
+            top: 0;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav__bar__section1 {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav__bar__section1 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav__bar__section2 img {
+            width: 150px;
+        }
+
+        .nav__bar__section3 {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile{
+            width: 30px;
+            height: 30px;
+        }
+
+        .nav__bar__section3 button {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 30px;
+            border: transparent;
+            font-size: medium;
+        }
+
+        .username{
+            margin-right: 20px;
+        }
+
+        #signinbtn,
+        #signupbtn {
+            cursor: pointer;
+        }
+
+        .nav__bar__right{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            background-color: #f7f7f7;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        label, input, select {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+        }
+        input, select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!--navbar-->
+<div class="nav__bar">
+    <div class="nav__bar__section1">
+        <a href="/home">Home</a>
+        <a href="/sales">Sales</a>
+        <a href="/contact">Contact Us</a>
+    </div>
+    <div class="nav__bar__section2">
+        <img src="./Images/smaller-feather-300x134.png" alt="Logo">
+    </div>
+    <div class="nav__bar__section3">
+        <div style="position: relative;">
+            <div class="nav__bar__right">
+                <img src="./Images/profile.png" alt="profile" class="profile" onclick="togglePopup()">
+                <p class="username"> <span th:text="${username}"></span> </p>
+            </div>
+            <div id="popupCard" class="popup-card">
+                <a href="/edit">Edit Details</a>
+                <!--                <a href="/delete">Delete Your Account</a>-->
+                <a href="/logout">Sign Out</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 style="text-align:center;">Edit Property</h2> <br>
+
+<form method="post" action="/edit-property">
+    <input type="hidden" name="originalLocation" th:value="${property.location}">
+
+    <label>Location:</label>
+    <input type="text" name="location" th:value="${property.location}" required>
+
+    <label>Country:</label>
+    <input type="text" name="country" th:value="${property.country}" required>
+
+    <label>Price:</label>
+    <input type="number" name="price" th:value="${property.price}" required>
+
+    <label>Sell or Rent:</label>
+    <select name="type" required>
+        <option th:selected="${property.type == 'sell'}" value="sell">Sell</option>
+        <option th:selected="${property.type == 'rent'}" value="rent">Rent</option>
+    </select>
+
+    <label>Size (sq ft):</label>
+    <input type="text" name="size" th:value="${property.size}" required>
+
+    <label>Image URL:</label>
+    <input type="url" name="imageUrl" th:value="${property.imageUrl}" required>
+
+    <button type="submit">Update</button>
+</form>
+
+<script>
+    function togglePopup() {
+        const card = document.getElementById("popupCard");
+        card.style.display = card.style.display === "block" ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+        const card = document.getElementById("popupCard");
+        if (!event.target.matches('.profile')) {
+            card.style.display = "none";
+        }
+    };
+</script>
+
+</body>
+</html>
