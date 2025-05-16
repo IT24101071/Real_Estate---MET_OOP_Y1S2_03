@@ -480,6 +480,7 @@ package com.example.realestateapp.PropertyManagement.Controller;
 import com.example.realestateapp.PropertyManagement.model.Property;
 import com.example.realestateapp.PropertyManagement.service.PropertyService;
 import com.example.realestateapp.PropertyManagement.BinarySearchTree.PropertyBST;
+import com.example.realestateapp.MailManagement.service.MailService;
 import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.HttpServletResponse;
 import java.nio.file.Files;
@@ -503,6 +504,8 @@ public class PropertyController {
     @Autowired
     private PropertyService propertyService;
 
+    @Autowired
+    private MailService mailService;
 
     @GetMapping("/sales")
     public String showSales(Model model, HttpSession session) {
@@ -707,6 +710,10 @@ public class PropertyController {
             } catch (DocumentException e) {
                 e.printStackTrace();
             }
+
+            session.setAttribute("lastReceipt", receiptText);
+            mailService.sendPaymentReceipt(p.getOwner(), receiptText);
+
             return "redirect:/payment-receipt";
         }
         return "redirect:/sales";

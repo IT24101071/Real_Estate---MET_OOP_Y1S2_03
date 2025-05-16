@@ -641,6 +641,7 @@ package com.example.realestateapp.UserManagement.controller;
 import com.example.realestateapp.PropertyManagement.service.PropertyService;
 import com.example.realestateapp.UserManagement.model.User;
 import com.example.realestateapp.UserManagement.service.UserService;
+import com.example.realestateapp.MailManagement.service.MailService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -658,6 +659,9 @@ public class UserController {
     private final UserService userService = new UserService();
     private final PropertyService propertyService = new PropertyService();
 
+    @Autowired
+    private MailService mailService; // ✅ Inject mail service
+
     @GetMapping("/signup")
     public String signupForm() {
         return "signup";
@@ -673,6 +677,10 @@ public class UserController {
                 model.addAttribute("message", "Username already exists. Please choose another.");
             } else if (userService.gmailExists(gmail)) {
                 model.addAttribute("message", "Email already registered. Please use another.");
+            } else {
+                userService.saveUser(new User(username, password, gmail));
+                mailService.sendSignupEmail(gmail, username); // ✅ Send email on success
+                return "redirect:/login";
             }
         } catch (IOException e) {
             model.addAttribute("message", "Signup failed.");
@@ -757,8 +765,6 @@ public class UserController {
             return "redirect:/login";
         }
         model.addAttribute("username", username);
-
-
 
         return "home";
     }

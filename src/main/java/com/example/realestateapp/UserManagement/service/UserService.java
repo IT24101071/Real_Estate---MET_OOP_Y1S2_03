@@ -1,4 +1,5 @@
 package com.example.realestateapp.UserManagement.service;
+
 import com.example.realestateapp.UserManagement.model.User;
 import org.springframework.stereotype.Service;
 
