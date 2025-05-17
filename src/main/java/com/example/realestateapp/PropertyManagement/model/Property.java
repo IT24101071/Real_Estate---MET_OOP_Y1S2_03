@@ -1,38 +1,3 @@
-//package com.example.realestateapp.PropertyManagement.model;
-//
-//public class Property {
-//    private String owner;
-//    private String location;
-//    private String country;
-//    private double price;
-//    private String type;
-//    private String size;
-//    private String imageUrl;
-//
-//    public Property() {}
-//
-//    public Property(String owner, String location, String country, double price, String type, String size, String imageUrl) {
-//        this.owner = owner;
-//        this.location = location;
-//        this.country = country;
-//        this.price = price;
-//        this.type = type;
-//        this.size = size;
-//        this.imageUrl = imageUrl;
-//    }
-//
-//    public String getOwner() { return owner; }
-//    public String getLocation() { return location; }
-//    public String getCountry() { return country; }
-//    public double getPrice() { return price; }
-//    public String getType() { return type; }
-//    public String getSize() { return size; }
-//    public String getImageUrl() { return imageUrl; }
-//}
-
-
-
-
 package com.example.realestateapp.PropertyManagement.model;
 
 public class Property {
