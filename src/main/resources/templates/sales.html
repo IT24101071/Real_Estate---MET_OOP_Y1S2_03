@@ -552,8 +552,8 @@
         <div style="position: relative;">
             <div class="nav__bar__right" onclick="togglePopup()">
                 <img src="./Images/profile.png" alt="profile" class="profile">
-                <p class="username"><span th:text="${username}"></span></p>
-                <i class="fas fa-chevron-down" style="font-size: 0.75rem; color: #64748b;"></i>
+                <p class="username"> <span th:text="${username}"></span> </p>
+                <span class="dropdown-arrow">▼</span>
             </div>
             <div id="popupCard" class="popup-card">
                 <a href="/edit"><i class="fas fa-user-edit"></i> Edit Details</a>
@@ -589,10 +589,14 @@
         </button>
     </form>
     <form action="/contact-requests" method="get">
-        <button type="submit" class="action-button">
-            <i class="fas fa-envelope"></i>
-            <span>Contact Requests</span>
-        </button>
+        <a href="/contact-requests" style="position: relative; text-decoration: none;">
+            <button style="position: relative; padding: 10px 20px; font-size: 16px; background-color: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer;">
+                📩 Contact Requests
+                <span th:if="${unreadCount > 0}" th:text="${unreadCount}"
+                      style="position: absolute; top: -8px; right: -8px; background-color: red; color: white; font-size: 12px; padding: 4px 7px; border-radius: 50%;">
+        </span>
+            </button>
+        </a>
     </form>
 </div>
 
@@ -662,7 +666,6 @@
                     </form>
                 </div>
 
-                <!-- Contact Owner button if not owner -->
                 <div th:if="${username != property.owner}" class="property-actions">
                     <form method="get" action="/contact-owner" style="width: 100%;">
                         <input type="hidden" name="owner" th:value="${property.owner}">
@@ -685,6 +688,14 @@
         card.style.display = card.style.display === "block" ? "none" : "block";
     }
 
+    window.onclick = function(event) {
+        const card = document.getElementById("popupCard");
+
+        // Only hide the popup if the clicked area is outside the profile dropdown
+        if (!event.target.closest('.nav__bar__right') && !event.target.closest('#popupCard')) {
+            card.style.display = "none";
+        }
+    };
     window.onclick = function(event) {
         const card = document.getElementById("popupCard");
         if (!event.target.matches('.profile') && !event.target.matches('.username') && !event.target.matches('.nav__bar__right') && !event.target.matches('.fa-chevron-down')) {

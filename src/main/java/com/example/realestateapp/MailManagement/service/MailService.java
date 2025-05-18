@@ -148,4 +148,37 @@ public class MailService {
             e.printStackTrace();
         }
     }
+
+    // ✅ Booking contact request notification to property owner
+    public void sendBookingNotificationToOwner(String ownerUsername, String propertyLocation, String visitorName,
+                                               String date, String timeSlot, String contactNumber, String messageText) {
+        String to = getEmailByUsername(ownerUsername);
+        if (to == null) {
+            System.out.println("❌ Email not found for property owner: " + ownerUsername);
+            return;
+        }
+
+        try {
+            SimpleMailMessage message = new SimpleMailMessage();
+            message.setTo(to);
+            message.setSubject("New Booking Request for Your Property");
+            message.setText("Hello " + ownerUsername + ",\n\n"
+                    + "You have received a new booking/contact request for your property at:\n"
+                    + propertyLocation + "\n\n"
+                    + "Visitor Details:\n"
+                    + "Name: " + visitorName + "\n"
+                    + "Date: " + date + "\n"
+                    + "Time Slot: " + timeSlot + "\n"
+                    + "Contact Number: " + contactNumber + "\n"
+                    + "Message: " + messageText + "\n\n"
+                    + "Please follow up accordingly.\n\n"
+                    + "Regards,\nReal Estate App Team");
+
+            mailSender.send(message);
+            System.out.println("✅ Booking email sent to " + to);
+        } catch (Exception e) {
+            System.out.println("❌ Failed to send booking email to " + to);
+            e.printStackTrace();
+        }
+    }
 }

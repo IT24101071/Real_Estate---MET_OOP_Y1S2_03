@@ -204,6 +204,8 @@
 <br>
 
 <h2>Contact Requests</h2>
+
+
 <br>
 <table>
     <thead>
@@ -226,7 +228,6 @@
         <td th:text="${req.message}"></td>
         <td th:text="${req.propertyLocation}"></td>
         <td>
-            <span th:if="${req.read}" class="read-status">Read</span>
             <form th:if="${!req.read}" method="post" action="/mark-contact-read" class="inline">
                 <input type="hidden" name="name" th:value="${req.visitorName}">
                 <input type="hidden" name="date" th:value="${req.date}">
@@ -234,9 +235,11 @@
                 <input type="hidden" name="owner" th:value="${req.owner}">
                 <button type="submit" class="mark-btn">Mark as Read</button>
             </form>
+            <span th:if="${req.read}" class="read-status">Read</span>
         </td>
     </tr>
     </tbody>
+
 </table>
 
 

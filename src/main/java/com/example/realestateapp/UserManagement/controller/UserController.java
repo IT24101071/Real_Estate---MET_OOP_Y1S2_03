@@ -21,7 +21,6 @@ public class UserController {
     private UserService userService;
     @Autowired
     private PropertyService propertyService;
-
     @Autowired
     private MailService mailService;
 
@@ -66,7 +65,7 @@ public class UserController {
         try {
             if ("admin".equals(username) && "admin123".equals(password)) {
                 session.setAttribute("username", username);
-                return "redirect:/admin-home";
+                return "redirect:/admin-dashboard";
             }
 
             if (userService.validateUser(username, password)) {
@@ -170,7 +169,7 @@ public class UserController {
             model.addAttribute("userList", new ArrayList<>());
             model.addAttribute("propertyList", new ArrayList<>());
         }
-        return "admin-home";
+        return "admin-dashboard";
     }
 
     @GetMapping("/index")
