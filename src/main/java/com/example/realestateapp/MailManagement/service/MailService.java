@@ -30,7 +30,6 @@ public class MailService {
         }
         return null;
     }
-
     // ✅ Signup email
     public void sendSignupEmail(String to, String username) {
         try {
