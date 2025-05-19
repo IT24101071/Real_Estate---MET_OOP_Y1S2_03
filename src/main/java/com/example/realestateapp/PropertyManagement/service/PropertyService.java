@@ -140,6 +140,9 @@
 
 
 
+
+package com.example.realestateapp.PropertyManagement.service;
+
 //
 //package com.example.realestateapp.PropertyManagement.service;
 //
@@ -471,7 +474,7 @@ package com.example.realestateapp.PropertyManagement.service;
 
 import com.example.realestateapp.MailManagement.service.MailService;
 import com.example.realestateapp.PropertyManagement.model.Property;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service;
 
 import java.io.*;
@@ -481,8 +484,10 @@ import java.util.*;
 public class PropertyService {
     private final String filePath = "data/properties.txt";
 
+
     @Autowired
     private MailService mailService;
+
 
     public void saveProperty(Property property) throws IOException {
         File file = new File(filePath);
@@ -493,6 +498,7 @@ public class PropertyService {
             writer.newLine();
         }
 
+
         String email = mailService.getEmailByUsername(property.getOwner());
         if (email != null) {
             String body = "Your property at " + property.getLocation() + ", " + property.getCountry() +
@@ -500,6 +506,7 @@ public class PropertyService {
                     "\nType: " + property.getType() + "\nSize: " + property.getSize();
             mailService.sendGeneralNotificationEmail(email, "Property Added – Real Estate App", body);
         }
+
     }
 
     public List<Property> getAllProperties() {
@@ -523,14 +530,21 @@ public class PropertyService {
         return properties;
     }
 
+
+    // ✅ New: Sort properties by price using Quick Sort
+=======
     // ✅ Added this method to fix your controller error
+
     public List<Property> getSortedPropertiesByPrice() {
         List<Property> properties = getAllProperties();
         quickSort(properties, 0, properties.size() - 1);
         return properties;
     }
 
+
+
     // ✅ QuickSort logic
+
     private void quickSort(List<Property> list, int low, int high) {
         if (low < high) {
             int pi = partition(list, low, high);
@@ -555,12 +569,22 @@ public class PropertyService {
     public void deleteProperty(String owner, String location) throws IOException {
         File file = new File(filePath);
         List<String> updatedLines = new ArrayList<>();
+
+=======
         boolean found = false;
+
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",", 7);
+
+                if (!(parts.length == 7 && parts[0].equals(owner) && parts[1].equals(location))) {
+                    updatedLines.add(line);
+                }
+            }
+        }
+=======
                 if (parts.length == 7 && parts[0].equals(owner) && parts[1].equals(location)) {
                     found = true;
                     continue;
@@ -573,8 +597,7 @@ public class PropertyService {
             for (String line : updatedLines) {
                 writer.write(line);
                 writer.newLine();
-            }
-        }
+         
 
         if (found) {
             String email = mailService.getEmailByUsername(owner);
@@ -583,19 +606,26 @@ public class PropertyService {
                 mailService.sendGeneralNotificationEmail(email, "Property Deleted – Real Estate App", body);
             }
         }
+
     }
 
     public void updateProperty(String owner, String originalLocation, Property updatedProperty) throws IOException {
         File file = new File(filePath);
         List<String> updatedLines = new ArrayList<>();
+
+
         boolean updated = false;
+
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",", 7);
                 if (parts.length == 7 && parts[0].equals(owner) && parts[1].equals(originalLocation)) {
+
+
                     updated = true;
+
                     updatedLines.add(updatedProperty.getOwner() + "," + updatedProperty.getLocation() + "," +
                             updatedProperty.getCountry() + "," + updatedProperty.getPrice() + "," +
                             updatedProperty.getType() + "," + updatedProperty.getSize() + "," + updatedProperty.getImageUrl());
@@ -612,6 +642,35 @@ public class PropertyService {
             }
         }
 
+    }
+
+    public void transferOwnership(String oldUsername, String newUsername) throws IOException {
+        File file = new File(filePath);
+        List<String> updatedLines = new ArrayList<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",", 7);
+                if (parts.length == 7 && parts[0].equals(oldUsername)) {
+                    parts[0] = newUsername;
+                    updatedLines.add(String.join(",", parts));
+                } else {
+                    updatedLines.add(line);
+                }
+            }
+        }
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            for (String line : updatedLines) {
+                writer.write(line);
+                writer.newLine();
+            }
+        }
+
+        System.out.println("Transferred property ownership from " + oldUsername + " to " + newUsername);
+
+
         if (updated) {
             String email = mailService.getEmailByUsername(updatedProperty.getOwner());
             if (email != null) {
@@ -621,6 +680,7 @@ public class PropertyService {
                 mailService.sendGeneralNotificationEmail(email, "Property Updated – Real Estate App", body);
             }
         }
+
     }
 
     public int getPropertyCount() throws IOException {

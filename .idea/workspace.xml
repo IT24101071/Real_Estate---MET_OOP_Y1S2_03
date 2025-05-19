@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4bc10eeb-2bf0-425d-9fd3-cab40333d61f" name="Changes" comment="Version 1 - With Mail Managment" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Risi2004&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/IT24101071/Real_Estate---MET_OOP_Y1S2_03.git",
+    "accountId": "fb884302-1450-4b77-940c-219756d8cc07"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2wtTegUUwMnIRDdswIf8yjeppiT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.admin_newsletter.html.executor": "Run",
+    "JavaScript Debug.admin_properties.html.executor": "Run",
+    "JavaScript Debug.admin_users.html.executor": "Run",
+    "JavaScript Debug.contact.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.RealestateappApplication.executor": "Run",
+    "git-widget-placeholder": "IT24102588---Joshwel-S",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Risikesan/OneDrive/Desktop/SLIIT ALL DOCUMENTS Y1S2/Object Oriented Programming - SE1020/Project/Spring Boot - Parts/Property Management/realestateapp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Risikesan\OneDrive\Desktop\SLIIT ALL DOCUMENTS Y1S2\Object Oriented Programming - SE1020\Project\Spring Boot\realestateapp\src\main\java\com\example\realestateapp\MailManagement" />
+      <recent name="C:\Users\Risikesan\OneDrive\Desktop\SLIIT ALL DOCUMENTS Y1S2\Object Oriented Programming - SE1020\Project\Spring Boot\realestateapp\src\main\java\com\example\realestateapp\ReviewManagement" />
+      <recent name="C:\Users\Risikesan\OneDrive\Desktop\realestateapp\src\main\java\com\example\realestateapp\EnquiryManagement" />
+      <recent name="C:\Users\Risikesan\OneDrive\Desktop\SLIIT ALL DOCUMENTS Y1S2\Object Oriented Programming - SE1020\Project\Spring Boot\realestateapp\src\main\java\com\example\realestateapp\Newsletter" />
+      <recent name="C:\Users\Risikesan\OneDrive\Desktop\SLIIT ALL DOCUMENTS Y1S2\Object Oriented Programming - SE1020\Project\Spring Boot\realestateapp\src\main\java\com\example\realestateapp\AdminManagement" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Risikesan\OneDrive\Desktop\SLIIT ALL DOCUMENTS Y1S2\Object Oriented Programming - SE1020\Project\Spring Boot\realestateapp\src\main\resources\templates\UserManagement" />
+      <recent name="C:\Users\Risikesan\OneDrive\Desktop\SLIIT ALL DOCUMENTS Y1S2\Object Oriented Programming - SE1020\Project\Spring Boot\realestateapp\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.RealestateappApplication">
+    <configuration name="admin_newsletter.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/realestateapp/templates/admin_newsletter.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="admin_properties.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/realestateapp/templates/admin_properties.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="admin_users.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/realestateapp/templates/admin_users.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="contact.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/realestateapp/templates/contact.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RealestateappApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="realestateapp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.realestateapp.RealestateappApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.contact.html" />
+        <item itemvalue="JavaScript Debug.admin_newsletter.html" />
+        <item itemvalue="JavaScript Debug.admin_properties.html" />
+        <item itemvalue="JavaScript Debug.admin_users.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4bc10eeb-2bf0-425d-9fd3-cab40333d61f" name="Changes" comment="" />
+      <created>1746859966338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746859966338</updated>
+      <workItem from="1746859967459" duration="3870000" />
+      <workItem from="1746863936637" duration="82000" />
+      <workItem from="1746865403053" duration="61000" />
+      <workItem from="1746878739152" duration="9721000" />
+      <workItem from="1746915132878" duration="5869000" />
+      <workItem from="1746992650682" duration="914000" />
+      <workItem from="1746993582469" duration="5298000" />
+      <workItem from="1747012556878" duration="13968000" />
+      <workItem from="1747085891187" duration="8312000" />
+      <workItem from="1747105019653" duration="1560000" />
+      <workItem from="1747106641208" duration="246000" />
+      <workItem from="1747115363460" duration="1267000" />
+      <workItem from="1747116651036" duration="3845000" />
+      <workItem from="1747135409472" duration="2574000" />
+      <workItem from="1747138020362" duration="100000" />
+      <workItem from="1747141812493" duration="8029000" />
+      <workItem from="1747150133797" duration="17000" />
+      <workItem from="1747150240488" duration="209000" />
+      <workItem from="1747174432987" duration="41000" />
+      <workItem from="1747190160100" duration="886000" />
+      <workItem from="1747275876741" duration="353000" />
+      <workItem from="1747628972680" duration="311000" />
+    </task>
+    <task id="LOCAL-00001" summary="Version 1 - With Mail Managment">
+      <option name="closed" value="true" />
+      <created>1747629131929</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747629131930</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <MESSAGE value="Version 1 - With Mail Managment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1 - With Mail Managment" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/realestateapp/EnquiryManagement/controller/EnquiryController.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

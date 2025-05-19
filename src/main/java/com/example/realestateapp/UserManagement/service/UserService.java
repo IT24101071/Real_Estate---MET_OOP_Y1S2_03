@@ -11,6 +11,20 @@ import java.util.List;
 public class UserService {
     private final String filePath = "data/users.txt";
 
+
+    public void saveUser(User user) throws IOException {
+        File file = new File(filePath);
+        file.getParentFile().mkdirs();
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+            writer.write(user.getUsername() + "," + user.getPassword() + "," + user.getGmail());
+            writer.newLine();
+        }
+    }
+
+
+
+=======
     public boolean emailExists(String email) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -25,6 +39,7 @@ public class UserService {
         }
         return false;
     }
+
 
     public boolean userExists(String username) throws IOException {
         File file = new File(filePath);
@@ -58,6 +73,8 @@ public class UserService {
         return false;
     }
 
+
+=======
     public void saveUser(User user) throws IOException {
         File file = new File(filePath);
         file.getParentFile().mkdirs(); // ensure the directory exists
@@ -116,6 +133,8 @@ public class UserService {
     }
 
 
+=======
+
 
     public void updatePasswordByEmail(String email, String newPassword) throws IOException {
         List<User> users = loadUsers();
@@ -130,6 +149,7 @@ public class UserService {
             }
         }
     }
+
 
     public void deleteUser(String username) throws IOException {
         List<User> users = loadUsers();
@@ -160,6 +180,10 @@ public class UserService {
         return users;
     }
 
+
+    // ✅ New method to get user count
+=======
+
     public int getUserCount() throws IOException {
         int count = 0;
         File file = new File(filePath);
@@ -174,3 +198,7 @@ public class UserService {
         return count;
     }
 }
+
+
+
+

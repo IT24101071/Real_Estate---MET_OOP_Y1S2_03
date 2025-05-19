@@ -76,21 +76,5 @@ Location: w
 Country: w
 Price: $2333.0
 Paid: $233.3
-Status: Success
 
-Invoice: INV-1747279693739
-Username: Risi
-Location: dea
-Country: sa
-Price: $221.0
-Paid: $22.1
-Status: Success
-
-Invoice: INV-1747451720236
-Username: Risi
-Location: W
-Country: E
-Price: $2333.0
-Paid: $233.3
-Status: Success
 
