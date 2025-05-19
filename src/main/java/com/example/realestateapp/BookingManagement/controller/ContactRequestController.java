@@ -1,6 +1,4 @@
-
 package com.example.realestateapp.BookingManagement.controller;
-
 import com.example.realestateapp.BookingManagement.model.ContactRequest;
 import com.example.realestateapp.BookingManagement.service.ContactRequestService;
 import com.example.realestateapp.MailManagement.service.MailService;
