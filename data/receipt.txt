@@ -86,3 +86,11 @@ Price: $222.0
 Paid: $22.200000000000003
 Status: Success
 
+Invoice: INV-1747629493156
+Username: Risi
+Location: w
+Country: w
+Price: $233.0
+Paid: $23.3
+Status: Success
+
