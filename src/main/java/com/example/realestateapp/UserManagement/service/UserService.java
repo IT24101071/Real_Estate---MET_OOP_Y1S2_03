@@ -11,6 +11,7 @@ import java.util.List;
 public class UserService {
     private final String filePath = "data/users.txt";
 
+
     public void saveUser(User user) throws IOException {
         File file = new File(filePath);
         file.getParentFile().mkdirs();
@@ -21,6 +22,23 @@ public class UserService {
         }
     }
 
+
+
+=======
+    public boolean emailExists(String email) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length == 3 && parts[2].equalsIgnoreCase(email)) {
+                    return true;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
 
     public boolean userExists(String username) throws IOException {
@@ -54,6 +72,19 @@ public class UserService {
         }
         return false;
     }
+
+
+=======
+    public void saveUser(User user) throws IOException {
+        File file = new File(filePath);
+        file.getParentFile().mkdirs(); // ensure the directory exists
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+            writer.write(user.getUsername() + "," + user.getPassword() + "," + user.getGmail());
+            writer.newLine();
+        }
+    }
+
 
     public boolean validateUser(String username, String password) throws IOException {
         File file = new File(filePath);
@@ -101,6 +132,25 @@ public class UserService {
         }
     }
 
+
+=======
+
+
+    public void updatePasswordByEmail(String email, String newPassword) throws IOException {
+        List<User> users = loadUsers();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            for (User user : users) {
+                if (user.getGmail().equalsIgnoreCase(email)) {
+                    writer.write(user.getUsername() + "," + newPassword + "," + user.getGmail());
+                } else {
+                    writer.write(user.getUsername() + "," + user.getPassword() + "," + user.getGmail());
+                }
+                writer.newLine();
+            }
+        }
+    }
+
+
     public void deleteUser(String username) throws IOException {
         List<User> users = loadUsers();
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
@@ -130,7 +180,10 @@ public class UserService {
         return users;
     }
 
+
     // ✅ New method to get user count
+=======
+
     public int getUserCount() throws IOException {
         int count = 0;
         File file = new File(filePath);
@@ -145,5 +198,7 @@ public class UserService {
         return count;
     }
 }
+
+
 
 
