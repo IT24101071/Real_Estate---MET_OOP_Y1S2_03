@@ -4,7 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bc10eeb-2bf0-425d-9fd3-cab40333d61f" name="Changes" comment="Version 1 - With Mail Managment" />
+    <list default="true" id="4bc10eeb-2bf0-425d-9fd3-cab40333d61f" name="Changes" comment="Version 1 - With Mail Managment">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/carddetails.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/contact.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/contact.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/properties.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/properties.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747147513007.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747147804648.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747147883067.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747148008911.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747148556406.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747149013315.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747149407848.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747150008823.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747150411261.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747195357204.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747195491685.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747209639596.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747209664550.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747210977730.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747276201155.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747279693739.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747451720236.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747629493156.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/BookingManagement/controller/ContactRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/BookingManagement/controller/ContactRequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/BookingManagement/service/ContactRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/BookingManagement/service/ContactRequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/MailManagement/service/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/MailManagement/service/MailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/PropertyManagement/Controller/PropertyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/PropertyManagement/Controller/PropertyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/PropertyManagement/service/PropertyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/PropertyManagement/service/PropertyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/UserManagement/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/UserManagement/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/UserManagement/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/UserManagement/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-property.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-property.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/card-details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact-owner.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact-requests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit-property.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/payment-gateway.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/payment-receipt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sales.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/BookingManagement/controller/ContactRequestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/BookingManagement/controller/ContactRequestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/BookingManagement/service/ContactRequestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/BookingManagement/service/ContactRequestService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/MailManagement/service/MailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/MailManagement/service/MailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/PropertyManagement/controller/PropertyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/PropertyManagement/controller/PropertyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/PropertyManagement/service/PropertyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/PropertyManagement/service/PropertyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/UserManagement/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/UserManagement/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/UserManagement/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/UserManagement/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/card-details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/contact-owner.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/contact-requests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/edit-property.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/payment-gateway.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/payment-receipt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/sales.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,12 +103,15 @@
     &quot;assignee&quot;: &quot;Risi2004&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/IT24101071/Real_Estate---MET_OOP_Y1S2_03.git",
-    "accountId": "fb884302-1450-4b77-940c-219756d8cc07"
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="9e44ef8f-9802-45fe-9fe8-0b1ec277f7ae" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/IT24101071/Real_Estate---MET_OOP_Y1S2_03.git&quot;,
+    &quot;accountId&quot;: &quot;9e44ef8f-9802-45fe-9fe8-0b1ec277f7ae&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -57,38 +131,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.admin_newsletter.html.executor": "Run",
-    "JavaScript Debug.admin_properties.html.executor": "Run",
-    "JavaScript Debug.admin_users.html.executor": "Run",
-    "JavaScript Debug.contact.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.RealestateappApplication.executor": "Run",
-    "git-widget-placeholder": "IT24102588---Joshwel-S",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Risikesan/OneDrive/Desktop/SLIIT ALL DOCUMENTS Y1S2/Object Oriented Programming - SE1020/Project/Spring Boot - Parts/Property Management/realestateapp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.admin_newsletter.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.admin_properties.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.admin_users.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.contact.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.RealestateappApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Risikesan/OneDrive/Desktop/SLIIT ALL DOCUMENTS Y1S2/Object Oriented Programming - SE1020/Project/Spring Boot - Parts/Property Management/realestateapp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Risikesan\OneDrive\Desktop\SLIIT ALL DOCUMENTS Y1S2\Object Oriented Programming - SE1020\Project\Spring Boot\realestateapp\src\main\java\com\example\realestateapp\MailManagement" />
@@ -115,18 +189,9 @@
     <configuration name="contact.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/realestateapp/templates/contact.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
     <configuration name="RealestateappApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="realestateapp" />
+      <module name="oop2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.realestateapp.RealestateappApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,12 +209,15 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4bc10eeb-2bf0-425d-9fd3-cab40333d61f" name="Changes" comment="" />
@@ -179,6 +247,11 @@
       <workItem from="1747190160100" duration="886000" />
       <workItem from="1747275876741" duration="353000" />
       <workItem from="1747628972680" duration="311000" />
+      <workItem from="1747755875363" duration="511000" />
+      <workItem from="1747790518453" duration="73000" />
+      <workItem from="1747790605464" duration="159000" />
+      <workItem from="1747790778358" duration="496000" />
+      <workItem from="1747791288242" duration="27000" />
     </task>
     <task id="LOCAL-00001" summary="Version 1 - With Mail Managment">
       <option name="closed" value="true" />
@@ -198,16 +271,5 @@
     <MESSAGE value="First Commit" />
     <MESSAGE value="Version 1 - With Mail Managment" />
     <option name="LAST_COMMIT_MESSAGE" value="Version 1 - With Mail Managment" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/realestateapp/EnquiryManagement/controller/EnquiryController.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

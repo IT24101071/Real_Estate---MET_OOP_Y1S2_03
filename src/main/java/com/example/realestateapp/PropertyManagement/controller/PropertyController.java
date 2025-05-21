@@ -477,6 +477,7 @@
 //
 package com.example.realestateapp.PropertyManagement.controller;
 
+import com.example.realestateapp.BookingManagement.service.ContactRequestService;
 import com.example.realestateapp.PropertyManagement.model.Property;
 import com.example.realestateapp.PropertyManagement.service.PropertyService;
 import com.example.realestateapp.PropertyManagement.BinarySearchTree.PropertyBST;
@@ -507,12 +508,22 @@ public class PropertyController {
     @Autowired
     private MailService mailService;
 
+    @Autowired
+    private ContactRequestService contactService;
+
 
     @GetMapping("/sales")
     public String showSales(Model model, HttpSession session) {
         String username = (String) session.getAttribute("username");
         model.addAttribute("username", username);
+
+        // ✅ Add unread contact request count to model
+        int unreadCount = contactService.getUnreadCount(username);
+        model.addAttribute("unreadCount", unreadCount);
+
+        // ✅ Load and sort properties
         model.addAttribute("properties", propertyService.getSortedPropertiesByPrice());
+
         return "sales";
     }
 

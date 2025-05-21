@@ -1,0 +1,5 @@
+
+
+Risi,Wellawatte,Sri Lanka,5000.0,sell,560,https://cdn.pixabay.com/photo/2018/11/06/22/29/land-3799279_1280.jpg
+Risi,Kandy,Sri Lanka,5000.0,rent,544,https://cdn.pixabay.com/photo/2022/03/21/02/08/land-7082135_1280.jpg
+Risi,Wellawatte,Sri Lanka,6000.0,sell,300,https://cdn.pixabay.com/photo/2022/03/21/02/08/land-7082135_1280.jpg
