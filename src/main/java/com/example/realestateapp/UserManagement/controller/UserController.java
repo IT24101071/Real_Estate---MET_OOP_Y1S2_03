@@ -1,8 +1,6 @@
 package com.example.realestateapp.UserManagement.controller;
 
-//import com.example.realestateapp.PropertyManagement.service.PropertyService;
-//import com.example.realestateapp.ReviewManagement.model.Review;
-//import com.example.realestateapp.ReviewManagement.service.ReviewService;
+
 import com.example.realestateapp.UserManagement.model.User;
 import com.example.realestateapp.UserManagement.service.UserService;
 import com.example.realestateapp.MailManagement.service.MailService;
@@ -21,10 +19,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-    //@Autowired
-    //private PropertyService propertyService;
-    //@Autowired
-    //private ReviewService reviewService;
+
     @Autowired
     private MailService mailService;
 
@@ -158,15 +153,16 @@ public class UserController {
 
         try {
             int userCount = userService.getUserCount();
-            //int propertyCount = propertyService.getPropertyCount();
+
             model.addAttribute("userCount", userCount);
-            //model.addAttribute("propertyCount", propertyCount);
+
+
             var allUsers = userService.loadUsers();
             var lastFiveUsers = allUsers.stream().skip(Math.max(0, allUsers.size() - 5)).collect(Collectors.toList());
-            //var allProperties = propertyService.getAllProperties();
-            //var lastFiveProperties = allProperties.stream().skip(Math.max(0, allProperties.size() - 5)).collect(Collectors.toList());
+
             model.addAttribute("userList", lastFiveUsers);
-            //model.addAttribute("propertyList", lastFiveProperties);
+
+
         } catch (IOException e) {
             model.addAttribute("userCount", 0);
             model.addAttribute("propertyCount", 0);
@@ -186,12 +182,7 @@ public class UserController {
         String username = (String) session.getAttribute("username");
         if (username == null) return "redirect:/login";
         model.addAttribute("username", username);
-//        try {
-//            //List<Review> reviews = reviewService.loadReviews();
-//            //model.addAttribute("reviews", reviews);
-//        } catch (IOException e) {
-//            model.addAttribute("reviews", List.of());
-//        }
+
         return "home";
     }
 
