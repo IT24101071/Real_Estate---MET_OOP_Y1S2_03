@@ -1,4 +1,3 @@
-
 package com.example.realestateapp.MailManagement.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,6 @@ public class MailService {
     @Autowired
     private JavaMailSender mailSender;
 
-
     // ✅ Get user email by username from users.txt
     public String getEmailByUsername(String username) {
         try (BufferedReader reader = new BufferedReader(new FileReader("data/users.txt"))) {
@@ -33,7 +31,7 @@ public class MailService {
         return null;
     }
 
-
+    // ✅ Signup email
     public void sendSignupEmail(String to, String username) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
@@ -43,7 +41,7 @@ public class MailService {
                     "Thank you for registering with Real Estate App!\n\n" +
                     "Your account has been successfully created. You can now browse, list, and manage properties with ease. We’re excited to have you on board!\n\n" +
                     "If you have any questions or need assistance, feel free to contact our support team.\n\n" +
-
+                    "Best regards,\nReal Estate App Team");
 
             mailSender.send(message);
             System.out.println("✅ Signup email sent to " + to);
@@ -52,8 +50,6 @@ public class MailService {
             e.printStackTrace();
         }
     }
-
-
 
     // ✅ Login notification email
     public void sendLoginEmail(String to, String username) {
@@ -103,7 +99,7 @@ public class MailService {
         }
     }
 
-    // ✅ Payment receipt emai
+    // ✅ Payment receipt email
     public void sendPaymentReceipt(String username, String receiptText) {
         String to = getEmailByUsername(username);
         if (to == null) {
@@ -115,22 +111,12 @@ public class MailService {
             SimpleMailMessage message = new SimpleMailMessage();
             message.setTo(to);
             message.setSubject("Payment Receipt – Real Estate App");
-
-
-            String body = "Hi " + username + ",\n\n" +
             message.setText("Hi " + username + ",\n\n" +
-
                     "Thank you for your recent payment on Real Estate App. Here are your transaction details:\n\n" +
                     "------------------------------------------\n" +
                     receiptText +
                     "------------------------------------------\n\n" +
                     "This receipt confirms that your payment was successfully processed. If you have any questions, feel free to reach out.\n\n" +
-
-                    "Best regards,\n" +
-                    "Real Estate App Billing Team";
-
-            message.setText(body);
-=======
                     "Best regards,\nReal Estate App Billing Team");
 
             mailSender.send(message);
@@ -141,20 +127,6 @@ public class MailService {
         }
     }
 
-
-    private String getEmailByUsername(String username) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("data/users.txt"))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts.length >= 3 && parts[0].equals(username)) {
-                    return parts[2]; // assuming format: username,password,email
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
     // ✅ Password reset link email
     public void sendResetLink(String to, String token) {
         try {
@@ -175,6 +147,38 @@ public class MailService {
             System.out.println("❌ Failed to send password reset email to " + to);
             e.printStackTrace();
         }
+    }
 
+    // ✅ Booking contact request notification to property owner
+    public void sendBookingNotificationToOwner(String ownerUsername, String propertyLocation, String visitorName,
+                                               String date, String timeSlot, String contactNumber, String messageText) {
+        String to = getEmailByUsername(ownerUsername);
+        if (to == null) {
+            System.out.println("❌ Email not found for property owner: " + ownerUsername);
+            return;
+        }
+
+        try {
+            SimpleMailMessage message = new SimpleMailMessage();
+            message.setTo(to);
+            message.setSubject("New Booking Request for Your Property");
+            message.setText("Hello " + ownerUsername + ",\n\n"
+                    + "You have received a new booking/contact request for your property at:\n"
+                    + propertyLocation + "\n\n"
+                    + "Visitor Details:\n"
+                    + "Name: " + visitorName + "\n"
+                    + "Date: " + date + "\n"
+                    + "Time Slot: " + timeSlot + "\n"
+                    + "Contact Number: " + contactNumber + "\n"
+                    + "Message: " + messageText + "\n\n"
+                    + "Please follow up accordingly.\n\n"
+                    + "Regards,\nReal Estate App Team");
+
+            mailSender.send(message);
+            System.out.println("✅ Booking email sent to " + to);
+        } catch (Exception e) {
+            System.out.println("❌ Failed to send booking email to " + to);
+            e.printStackTrace();
+        }
     }
 }
