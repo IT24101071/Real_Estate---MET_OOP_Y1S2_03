@@ -12,62 +12,224 @@
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Young+Serif&display=swap"
           rel="stylesheet">
     <style>
-        * {
-            font-family: "Glacial Indifference", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: <weight>;
-            font-style: normal;
-            font-variation-settings: "wdth" 100;
-            margin: 0px;
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --danger-color: #dc2626;
+            --success-color: #10b981;
+            --light-bg: #f3f4f6;
+            --dark-text: #1f2937;
+            --light-text: #f9fafb;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
         }
-
+        body{
+            margin: 0;
+        }
+        *{
+            font-family: "Glacial Indifference", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* === Navbar Styling === */
         .nav__bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 0px;
-            padding: 10px;
-            font-size: medium;
-            font-weight: lighter;
+            padding: 0.75rem 2rem;
+            background-color: white;
             position: sticky;
             top: 0;
-            background-color: white;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .nav__bar__section1 {
             display: flex;
-            gap: 30px;
+            gap: 2rem;
         }
 
         .nav__bar__section1 a {
             text-decoration: none;
-            color: black;
+            color: #1f2937;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+        }
+
+        .nav__bar__section1 a:hover {
+            color: #2563eb;
+        }
+
+        .nav__bar__section1 a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #2563eb;
+            transition: width 0.3s ease;
+        }
+
+        .nav__bar__section1 a:hover::after {
+            width: 100%;
+        }
+
+        .nav__bar__section2 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
         }
 
         .nav__bar__section2 img {
             width: 150px;
+            height: auto;
         }
 
         .nav__bar__section3 {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .nav__bar__right {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .nav__bar__right:hover {
+            background-color: #f3f4f6;
+        }
+
+        .profile {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #2563eb;
+        }
+
+        .username {
+            font-weight: 500;
+            margin-right: 10px;
+            color: #1f2937;
+        }
+
+        /* === Profile Dropdown Popup === */
+        .popup-card {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 60px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 10px 0;
+            z-index: 999;
+            animation: fadeIn 0.3s ease-in-out;
+            min-width: 200px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .popup-card a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #1f2937;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .popup-card a:hover {
+            background-color: #f3f4f6;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* === Responsive Adjustments === */
+        @media (max-width: 768px) {
+            .nav__bar {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav__bar__section1 {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav__bar__section2 {
+                justify-content: center;
+            }
+
+            .nav__bar__section3 {
+                justify-content: center;
+            }
+
+            .popup-card {
+                right: auto;
+                left: 0;
+            }
+        }
+
+        .nav__bar__section3 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        #signinbtn {
+            background-color: #5bb0ea;
+            color: white;
+            border: 2px solid #5bb0ea;
+            width: 100px;
+        }
+
+        #signupbtn {
+            background-color: #5bb0ea;
+            color: white;
+            border: 2px solid #5bb0ea;
+            width: 100px;
+        }
+
+        #signinbtn:hover {
+            transform: translateY(-2px);
+        }
+
+        #signupbtn:hover {
+            transform: translateY(-2px);
         }
 
         .nav__bar__section3 button {
-            background-color: black;
-            color: white;
-            padding: 10px;
+            padding: 10px 20px;
             border-radius: 30px;
-            border: transparent;
-            font-size: medium;
-        }
-
-        #signinbtn,
-        #signupbtn {
+            font-size: 15px;
+            font-weight: 600;
             cursor: pointer;
+            transition: all 0.3s;
         }
 
         .sale__image img {
@@ -214,6 +376,7 @@
         .call__page__section1 h4 {
             text-align: left;
             font-size: 20px;
+            text-align: center;
             margin: 50px;
             margin-left: 150px;
             width: 70%;
@@ -325,7 +488,7 @@
         .footer__section {
             display: flex;
             color: white;
-            justify-content: space-around;
+            justify-content: space-between;
             gap: 10px;
             background-color: #142542;
         }
@@ -338,6 +501,7 @@
         .footer__section__one__social {
             display: flex;
             flex-direction: column;
+            margin-right: 30px;
             align-items: center;
             margin-top: 20px;
             gap: 10px;
@@ -492,41 +656,7 @@
     </div>
 </div>
 
-<!--property__page-->
-<div class="property__page">
-    <h2>Types Of Properties To Sale/Rent</h2>
-    <br>
-    <div class="property__page__cards">
-        <div class="property__page__cards__section">
-            <img src="./Images/land.jpg" alt="Land">
-            <h3>Lands</h3>
-            <br>
-            <button>Sell</button>
-            <button>Rent/Lease</button>
-        </div>
-        <div class="property__page__cards__section">
-            <img src="./Images/land house.jpg" alt="Land House">
-            <h3>House</h3>
-            <br>
-            <button>Sell</button>
-            <button>Rent/Lease</button>
-        </div>
-        <div class="property__page__cards__section">
-            <img src="./Images/aprtmenr.avif" alt="Apartment">
-            <h3>Apartments</h3>
-            <br>
-            <button>Sell</button>
-            <button>Rent/Lease</button>
-        </div>
-        <div class="property__page__cards__section">
-            <img src="./Images/hotels.jpg" alt="Hotel">
-            <h3>Hotels</h3>
-            <br>
-            <button>Sell</button>
-            <button>Rent/Lease</button>
-        </div>
-    </div>
-</div>
+
 
 <!--about__us-->
 <div class="about__us">
@@ -548,7 +678,6 @@
             experience in the investment process enables us to identify potential risks that may go unnoticed by
             others and filter out any misinformation prevalent in the property sector.</p>
         <br>
-        <button>Find Out More</button>
     </div>
 </div>
 
@@ -558,153 +687,8 @@
         <h4>Launch your property investment portfolio with a dependable and transparent company that help you hit
             your financial targets and nurture a long-standing partnership with you.</h4>
     </div>
-    <div class="call__page__section2">
-        <button>Book A Call Today</button>
-    </div>
 </div>
-
-<!--review__page-->
-<div class="review__page__heading">
-    <h1>Don’t just take our word for it, read the reviews.</h1>
-</div>
-<div class="review__page">
-    <div class="review__page__section">
-        <h4>Kasun Kumara De Silva</h4>
-        <p>2025-02-12</p>
-        <p>⭐⭐⭐⭐⭐ ✅</p>
-        <img src="./Images/google.png" alt="google">
-        <p>"We had an amazing experience buying our home with this real estate agency. The agent was incredibly
-            knowledgeable, patient, and always available to answer our questions. The process was smooth from start
-            to finish, and we couldn't be happier with our new home!"</p>
-    </div>
-    <div class="review__page__section">
-        <h4>Tharushi Wijesinghe</h4>
-        <p>2025-02-16</p>
-        <p>⭐⭐⭐⭐⭐ ✅</p>
-        <img src="./Images/google.png" alt="google">
-        <p>"The house we purchased was exactly as described in the listing. The seller was honest, provided all
-            necessary details, and even helped us with post-purchase concerns. We are extremely happy with our new
-            home and appreciate the hassle-free transaction!"</p>
-    </div>
-    <div class="review__page__section">
-        <h4>Dilan Fernando</h4>
-        <p>2025-02-21</p>
-        <p>⭐⭐⭐⭐⭐ ✅</p>
-        <img src="./Images/google.png" alt="google">
-        <p>"Finding our dream home felt so easy thanks to this amazing real estate agency. They handled all the
-            paperwork efficiently and made sure we got the best deal possible. I would highly recommend them to
-            anyone looking to buy a house."</p>
-    </div>
-    <div class="review__page__section">
-        <h4>Ishara Rathnayake</h4>
-        <p>2025-03-01</p>
-        <p>⭐⭐⭐⭐⭐ ✅</p>
-        <img src="./Images/google.png" alt="google">
-        <p>"The real estate agent was knowledgeable and responsive, making the home-buying process so much easier.
-            They provided valuable insights about the market and helped us negotiate a great price. We are grateful
-            for their excellent service and guidance!"</p>
-    </div>
-    <div class="review__page__section">
-        <h4>Janith Senanayake</h4>
-        <p>2025-03-05</p>
-        <p>⭐⭐⭐⭐⭐ ✅</p>
-        <img src="./Images/google.png" alt="google">
-        <p>"Our home-buying journey was made simple and stress-free thanks to this fantastic real estate company.
-            They provided us with multiple options and guided us through every step of the process. We couldn’t have
-            asked for a better experience."</p>
-    </div>
-    <div class="review__page__section">
-        <h4>Chamodi Gamage</h4>
-        <p>2025-03-10</p>
-        <p>⭐⭐⭐⭐⭐ ✅</p>
-        <img src="./Images/google.png" alt="google">
-        <p>"We had a seamless home-buying experience with this real estate company. Their team was always available
-            to answer our questions and made sure we understood each step of the process. Thanks to them, we found
-            our dream home without any hassle!"</p>
-    </div>
-    <div class="review__page__section">
-        <h4>Micheal Bay</h4>
-        <p>2025-03-13</p>
-        <p>⭐⭐⭐⭐⭐ ✅</p>
-        <img src="./Images/google.png" alt="google">
-        <p>"This beachfront hotel was an absolute paradise. The views were breathtaking, the rooms were spacious and
-            clean, and the service was impeccable. We will definitely be recommending this place to our friends and
-            family!"</p>
-    </div>
-    <div class="review__page__section">
-        <h4>William woodbill</h4>
-        <p>2025-03-18</p>
-        <p>⭐⭐⭐⭐⭐ ✅</p>
-        <img src="./Images/google.png" alt="google">
-        <p>"We stayed at this beautiful resort, and everything about it was perfect. The rooms were spacious, the
-            pool area was stunning, and the food was delicious. I would definitely book this place again!"</p>
-    </div>
-    <div class="review__page__section">
-        <h4>Nithil Wanniachchi</h4>
-        <p>2025-03-25</p>
-        <p>⭐⭐⭐⭐⭐ ✅</p>
-        <img src="./Images/google.png" alt="google">
-        <p>"Working with this real estate agent was the best decision we made. They took the time to understand our
-            needs and found us the perfect property within our budget. Their professionalism and attention to detail
-            made the entire process stress-free."</p>
-    </div>
-    <div class="review__page__section">
-        <h4>Kamal Kinsiri</h4>
-        <p>2025-03-30</p>
-        <p>⭐⭐⭐⭐⭐ ✅</p>
-        <img src="./Images/google.png" alt="google">
-        <p>“We were hesitant about buying the land, but this agency made everything simple and straightforward. They
-            answered all our questions and helped us find a home in a great neighborhood. The entire experience was
-            hassle-free and enjoyable."</p>
-    </div>
-    <div class="review__page__section">
-        <h4>Nuwan Chamara</h4>
-        <p>2025-04-06</p>
-        <p>⭐⭐⭐⭐⭐ ✅</p>
-        <img src="./Images/google.png" alt="google">
-        <p>"Our real estate agent was a true professional who worked tirelessly to find us the right land. They were
-            attentive to our needs, provided great advice, and ensured we got the best deal possible. We highly
-            recommend their services!"</p>
-    </div>
-    <div class="review__page__section">
-        <h4>Tom Amandas</h4>
-        <p>2025-04-15</p>
-        <p>⭐⭐⭐⭐⭐ ✅</p>
-        <img src="./Images/google.png" alt="google">
-        <p>"This hotel offers the perfect combination of luxury and comfort. The ambiance is relaxing, the staff is
-            extremely courteous, and the amenities are top-notch. I would recommend this hotel to anyone visiting
-            the area!" </p>
-    </div>
-</div>
-
-<!--news__letter-->
-<div class="news__letter">
-    <h1>Subscribe to our Newsletter</h1>
-    <div class="news__letter__section">
-        <div class="news__letter__section1">
-            <p>First Name</p>
-            <input type="text" name="" id="">
-            <p>Last Name</p>
-            <input type="text" name="" id="">
-        </div>
-        <div class="news__letter__section2">
-            <p>Email</p>
-            <input type="text" name="" id="">
-            <br>
-            <br>
-        </div>
-        <div class="news__letter__section3">
-            <p>Red Cardinal Property Investment needs the contact information you provide to us to contact you about
-                our products and services. You may unsubscribe from these communications at any time. For
-                information on how to unsubscribe, as well as our privacy practices and commitment to protecting
-                your privacy, please review our Privacy Policy.</p>
-            <br>
-        </div>
-        <div class="news__letter__section4">
-            <button>Submit</button>
-        </div>
-    </div>
-</div>
+<br>
 
 <!--footer__section__one-->
 <div class="footer__section">
@@ -713,19 +697,6 @@
         <a href="./index.html">Home</a> <br>
         <a href="./sales.html">Sales</a> <br>
         <a href="./contact.html">Contact Us</a>
-    </div>
-    <div class="footer__section__one">
-        <h3>Property Types</h3>
-        <p>Apartments</p>
-        <p>Houses</p>
-        <p>Villas</p>
-        <p>Lands</p>
-    </div>
-    <div class="footer__section__one">
-        <h3>More Informaton</h3>
-        <p>About Sri Lanka</p>
-        <p>About Red Cardinal</p>
-        <p>Testimonials</p>
     </div>
     <div class="footer__section__one__social">
         <h3>Stay Connected</h3>
