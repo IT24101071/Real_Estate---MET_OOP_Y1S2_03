@@ -5,76 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bc10eeb-2bf0-425d-9fd3-cab40333d61f" name="Changes" comment="Version 1 - With Mail Managment">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/carddetails.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/contact.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/contact.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/properties.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/properties.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipt.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747147513007.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747147804648.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747147883067.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747148008911.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747148556406.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747149013315.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747149407848.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747150008823.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747150411261.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747195357204.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747195491685.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747209639596.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747209664550.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747210977730.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747276201155.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747279693739.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747451720236.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/receipts/INV-1747629493156.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/BookingManagement/controller/ContactRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/BookingManagement/controller/ContactRequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/BookingManagement/service/ContactRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/BookingManagement/service/ContactRequestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/MailManagement/service/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/MailManagement/service/MailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/PropertyManagement/Controller/PropertyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/PropertyManagement/Controller/PropertyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/PropertyManagement/service/PropertyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/PropertyManagement/service/PropertyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/UserManagement/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/UserManagement/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/UserManagement/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/realestateapp/UserManagement/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-property.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-property.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/card-details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact-owner.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact-requests.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit-property.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/payment-gateway.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/payment-receipt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sales.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/BookingManagement/controller/ContactRequestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/BookingManagement/controller/ContactRequestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/BookingManagement/service/ContactRequestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/BookingManagement/service/ContactRequestService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/MailManagement/service/MailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/MailManagement/service/MailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/PropertyManagement/controller/PropertyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/PropertyManagement/controller/PropertyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/PropertyManagement/service/PropertyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/PropertyManagement/service/PropertyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/UserManagement/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/UserManagement/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/realestateapp/UserManagement/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/realestateapp/UserManagement/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/card-details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/contact-owner.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/contact-requests.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/edit-property.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/payment-gateway.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/payment-receipt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/sales.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,6 +183,7 @@
       <workItem from="1747790605464" duration="159000" />
       <workItem from="1747790778358" duration="496000" />
       <workItem from="1747791288242" duration="27000" />
+      <workItem from="1747792946271" duration="736000" />
     </task>
     <task id="LOCAL-00001" summary="Version 1 - With Mail Managment">
       <option name="closed" value="true" />
